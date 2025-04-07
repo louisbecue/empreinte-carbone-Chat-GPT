@@ -3,9 +3,10 @@ const MODEL_EMISSIONS = {
     "gpt-3.5-turbo": 0.932,
     "gpt-4": 116,
     "gpt-4-turbo": 29.9,
-    "gpt-4o-mini": 0.54,
+    "gpt-4o-mini": 1.2,
     "o1": 9.11,
-    "o1-mini": 0.54,
+    "o1-mini": 0.78,
+    "o3-mini": 6.71,
     "text-davinci-002-render-sha": 44.88,
     "auto": 29.9,
     "default": 0
