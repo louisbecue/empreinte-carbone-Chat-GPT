@@ -74,7 +74,7 @@ function displayCarbonFootprint(result) {
         <h3><i class="fas fa-info-circle"></i> Important :</h3>
         <p>Ces données sont des estimations basées sur des valeurs moyennes d'émissions.</p>
         <p>Les émissions réelles peuvent varier et sont souvent sous-estimées.</p>
-        <p>Chaque utilisation est estimée pour générer environ 170 tokens (équivalent à écrire un email).</p>
+        <p>Chaque utilisation est estimée pour générer environ 170 tokens (équivalent à générer un email).</p>
     </div>`;
     
     carbonResult.innerHTML = html;
