@@ -52,6 +52,7 @@ function displayCarbonFootprint(result) {
         <ul class="equivalence-list">
             <li><i class="fas fa-car"></i> Faire environ <strong> ${(result.totalFootprint / 130).toFixed(0)} </strong> Kilomètres dans une voiture essence moyenne (130g/Km) </li>
             <li><i class="fas fa-mobile-alt"></i> Charger votre smartphone <strong> ${(result.totalFootprint / 0.25).toFixed(0)}</strong> fois (0,25g/recharge)</li>
+            <li><i class="fas fa-ice-cream"></i> Manger <strong> ${(result.totalFootprint / 170).toFixed(0)}</strong> McFlurry (0.17 kg/McFlurry)</li>
             <li><i class="fas fa-hamburger"></i> Manger <strong> ${(result.totalFootprint / 2350).toFixed(0)}</strong> Big Mac (2,35 kg/Big Mac)</li>
         </ul>
     </div>`;
