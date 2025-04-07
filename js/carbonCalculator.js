@@ -1,12 +1,13 @@
 const MODEL_EMISSIONS = {
-    "gpt-4o": 2.68,
-    "gpt-3.5-turbo": 0.274,
-    "gpt-4": 34.1,
-    "gpt-4-turbo": 8.8,
-    "gpt-4o-mini": 0.159,
-    "o1": 2.68,
-    "o1-mini": 0.159,
-    "auto": 8.8,
+    "gpt-4o": 9.11,
+    "gpt-3.5-turbo": 0.932,
+    "gpt-4": 116,
+    "gpt-4-turbo": 29.9,
+    "gpt-4o-mini": 0.54,
+    "o1": 9.11,
+    "o1-mini": 0.54,
+    "text-davinci-002-render-sha": 44.88,
+    "auto": 29.9,
     "default": 0
 };
 
@@ -63,7 +64,7 @@ function displayCarbonFootprint(result) {
     
     for (const model in result.detailedEmissions) {
         const data = result.detailedEmissions[model];
-        html += `<li><strong> ${model} </strong> : ${data.count} utilisations × ${data.emissionPerUse.toFixed(2)} g CO2 = ${(data.totalEmission / 1000).toFixed(6)} kg CO2</li>`;
+        html += `<li><strong> ${model} </strong> : ${data.count} requêtes × ${data.emissionPerUse.toFixed(2)} g CO2 = ${(data.totalEmission / 1000).toFixed(6)} kg CO2</li>`;
     }
     
     html += `</ul>
@@ -71,7 +72,9 @@ function displayCarbonFootprint(result) {
     
     html += `<div class="warning">
         <h3><i class="fas fa-info-circle"></i> Important :</h3>
-        <p>Ces données sont des estimations basées sur des valeurs moyennes d'émissions. Les émissions réelles peuvent varier.</p>
+        <p>Ces données sont des estimations basées sur des valeurs moyennes d'émissions.</p>
+        <p>Les émissions réelles peuvent varier et sont souvent sous-estimées.</p>
+        <p>Chaque utilisation est estimée pour générer environ 170 tokens (équivalent à écrire un email).</p>
     </div>`;
     
     carbonResult.innerHTML = html;

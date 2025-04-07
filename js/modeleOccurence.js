@@ -14,7 +14,11 @@ function countDefaultModelSlugs(jsonData) {
  */
 function findAndCountSlugs(jsonObj, slugCounts) {
     if (jsonObj && typeof jsonObj === 'object' && !Array.isArray(jsonObj)) {
-        if ('default_model_slug' in jsonObj) {
+        if ('model_slug' in jsonObj) {
+            const slug = jsonObj['model_slug'];
+            slugCounts[slug] = (slugCounts[slug] || 0) + 1;
+        }
+        else if ('default_model_slug' in jsonObj) {
             const slug = jsonObj['default_model_slug'];
             slugCounts[slug] = (slugCounts[slug] || 0) + 1;
         }
