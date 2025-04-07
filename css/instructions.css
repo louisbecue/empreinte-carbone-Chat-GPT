@@ -1,0 +1,90 @@
+.instructions-container {
+    background-color: rgba(129, 199, 132, 0.05);
+    border-radius: 8px;
+    margin: 25px auto;
+    max-width: 85%;
+    text-align: center;
+    box-shadow: none;
+    border: 1px solid rgba(129, 199, 132, 0.2);
+    overflow: hidden;
+}
+
+.instructions-header {
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.instructions-header:hover {
+    background-color: rgba(129, 199, 132, 0.1);
+}
+
+.instructions-header p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-icon {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.toggle-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.instructions-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions-content.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.instructions-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    padding-bottom: 15px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.instructions-content li {
+    padding: 8px 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(129, 199, 132, 0.15);
+}
+
+.instructions-content li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.instructions-content li i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}

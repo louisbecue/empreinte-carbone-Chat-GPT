@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'Empreinte Carbone ChatGPT</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/instructions.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/sources.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" href="assets/feuille.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculateur d'Empreinte Carbone ChatGPT</h1>
+            <p>Mesurez l'impact environnemental de vos conversations avec ChatGPT</p>
+        </header>
+        
+        <div class="upload-card">
+            <div class="card-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h2>Importez Vos Données</h2>
+            <div class="instructions-container">
+                <div class="instructions-header" id="instructionsToggle">
+                    <p> Comment récupérer vos données ChatGPT <i class="fas fa-chevron-down toggle-icon"></i></p>
+                </div>
+                <div class="instructions-content collapsed" id="instructionsContent">
+                    <ul>
+                        <li><i class="fas fa-sign-in-alt"></i> Connectez-vous à votre compte ChatGPT</li>
+                        <li><i class="fas fa-user-circle"></i> Cliquez sur votre profil</li>
+                        <li><i class="fas fa-cog"></i> Accédez aux paramètres de votre compte</li>
+                        <li><i class="fas fa-download"></i> Dans "Data controls", cliquez sur "Export data"</li>
+                        <li><i class="fas fa-clock"></i> Attendez de recevoir un email de confirmation</li>
+                        <li><i class="fas fa-file-download"></i> Téléchargez vos données depuis le lien fourni</li>
+                        <li><i class="fas fa-file-archive"></i> Dézipper le fichier qui vous a été envoyé</li>
+                        <li><i class="fas fa-search"></i> Cherchez le fichier <strong>conversations.json</strong> dans le dossier</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Importez votre fichier <strong>conversations.json</strong> :</p>
+            <input type="file" id="fileInput" accept=".json">
+            <button id="uploadButton"><i class="fas fa-check-circle"></i> Calculer mon bilan carbonnempact</button>
+        </div>
+        
+        <div id="result" class="result-card hidden">
+            <div class="card-icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <h2>Résultats d'Empreinte Carbone</h2>
+            <div id="carbonResult"></div>
+        </div>
+        
+        <footer>
+            <nav class="sources-nav">
+                <div class="sources-title">
+                    <i class="fas fa-book"></i> Sources et références
+                </div>
+                <ul class="sources-links">
+                    <li><a href="./data/model-emission.json"></i> Données utilisées</a></li>
+                    <li><a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" target="_blank"></i> EcoLogits Calculator</a></li>
+                    <li><a href="https://generationia.flint.media/p/comment-calculer-vraiment-impact-carbone-de-chatgpt-climat-ia-eau" target="_blank"></i> Comment calculer (vraiment) l'impact carbone de ChatGPT ? - Génération IA</a></li>
+                    <li><a href="https://blog.ekip.app/quelle-est-lempreinte-carbone-de-chatgpt/" target="_blank"></i> Quelle est l'empreinte carbone d'une requête sur Chat GPT ? - le blog d'Ekip.</a></li>
+                    <li><a href="https://carlabelling.ademe.fr/chiffrescles/r/evolutionTauxCo2" target="_blank"></i> Évolution du taux moyen d'émissions de CO2 en France - ADEME</a></li>
+                    <li><a href="https://www.gentside.com/news/conso/mcdonalds-quels-sont-les-produits-qui-polluent-le-plus_art100622.html" target="_blank"></i> Emmsion en Co2 des produits McDonalds</a></li>
+                </ul>
+            </nav>
+
+            <p>Les données que vous fournissez ne sont stockées sur aucun serveur, n'hésitez pas à regarder le code source ;)</p>
+            <div class="contact-info">
+                <p>Développé par Louis<a href="https://github.com/louisbecue"><i class="fab fa-github"></i></a> | <a href="mailto:louis.becue@ik.me"><i class="fas fa-envelope"></i></a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/modeleOccurence.js"></script>
+    <script src="js/carbonCalculator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

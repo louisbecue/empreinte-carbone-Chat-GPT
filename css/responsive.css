@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .upload-card, .result-card {
+        padding: 20px;
+    }
+    
+    .contact-info p {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-info a {
+        width: 80%;
+        justify-content: center;
+    }
+    
+    footer > p:first-of-type {
+        max-width: 95%;
+        padding: 10px;
+    }
+    
+    .sources-links {
+        flex-direction: column;
+    }
+    
+    .sources-links li {
+        flex-basis: 100%;
+    }
+
+    .sources-links a {
+        justify-content: center;
+    }
+    
+    footer .sources-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .instructions {
+        padding: 15px;
+        max-width: 95%;
+    }
+    
+    .instructions li {
+        padding: 10px 0;
+    }
+}
