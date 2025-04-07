@@ -39,4 +39,9 @@ input[type="file"] {
     border: 2px dashed var(--secondary-color);
     border-radius: 8px;
     background-color: rgba(129, 199, 132, 0.1);
+    margin-bottom: 10px;
+}
+
+.upload-input {
+    text-align: center;
 }
