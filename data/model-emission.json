@@ -1,11 +1,12 @@
 {
-    "gpt-4o": 2.68,
-    "gpt-3.5-turbo": 0.274,
-    "gpt-4": 34.1,
-    "gpt-4-turbo": 8.8,
-    "gpt-4o-mini": 0.159,
-    "o1": 2.68,
-    "o1-mini": 0.159,
-    "auto": 8.8,
+    "gpt-4o": 9.11,
+    "gpt-3.5-turbo": 0.932,
+    "gpt-4": 116,
+    "gpt-4-turbo": 29.9,
+    "gpt-4o-mini": 0.54,
+    "o1": 9.11,
+    "o1-mini": 0.54,
+    "text-davinci-002-render-sha": 44.88,
+    "auto": 29.9,
     "default": 0
 }
